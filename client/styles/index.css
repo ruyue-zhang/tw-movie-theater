@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: rgb(75, 70, 70);
+}
+
+.search {
+  margin-top: 20px;
+  width: 400px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.icon-sousuo {
+  color: white;
+  font-size: 30px;
+}
