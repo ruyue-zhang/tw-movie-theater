@@ -4,9 +4,8 @@
 }
 
 .nav {
-  position: absolute;
   width: 100%;
-  height: 200px;
+  height: 100px;
   text-align: center;
   background-color: rgb(75, 70, 70);
 }
@@ -22,4 +21,38 @@
 .icon-sousuo {
   color: white;
   font-size: 30px;
+    border: 0;
+    padding: 0;
+}
+
+.movies-stage {
+  position: relative;
+  display: flex;
+}
+
+.type-list {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+}
+
+.movie-type {
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+.movie-list {
+  flex-grow: 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-row {
+  flex-grow: 1;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.movie-info {
+  display: inline;
 }
