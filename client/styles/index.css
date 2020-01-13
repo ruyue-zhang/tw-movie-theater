@@ -34,7 +34,7 @@
   flex-grow: 1;
   flex-direction: column;
   line-height: 50px;
-  margin-left: 20px;
+  text-align: center;
 }
 
 .movie-type {
@@ -53,11 +53,17 @@
 }
 
 .movie-row {
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
   justify-content: space-between;
   list-style-type: none;
 }
 
 .movie-info {
-  display: inline;
+  margin: 20px;
+  height: 200px;
+  display: inline-block;
+  flex-grow: 1;
+  background-color: wheat;
 }
