@@ -12,3 +12,5 @@ function getAllData() {
       }, 
   })
 }
+
+getAllData();
