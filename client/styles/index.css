@@ -24,23 +24,26 @@
 }
 
 .movies-stage {
+  display: flex;
   border: 0;
   padding: 0;
-}
-
-.movies-stage {
-  display: flex;
 }
 
 .type-list {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  line-height: 50px;
+  margin-left: 20px;
 }
 
 .movie-type {
   flex-grow: 1;
   list-style-type: none;
+}
+
+.movie-type:hover {
+  color: rgb(253, 112, 18);
 }
 
 .movie-list {
