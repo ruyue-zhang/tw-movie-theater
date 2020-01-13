@@ -21,18 +21,20 @@
 .icon-sousuo {
   color: white;
   font-size: 30px;
-    border: 0;
-    padding: 0;
 }
 
 .movies-stage {
-  position: relative;
+  border: 0;
+  padding: 0;
+}
+
+.movies-stage {
   display: flex;
 }
 
 .type-list {
   display: flex;
-  flex-grow: 2;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -42,7 +44,7 @@
 }
 
 .movie-list {
-  flex-grow: 8;
+  flex-grow: 20;
   display: flex;
   flex-direction: column;
 }
