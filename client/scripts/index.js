@@ -13,6 +13,7 @@ function searchByKeyWords(){
   //   }, 
   // });
 　window.open('detail.html');
+  console.log(keyWords);
 }
 
 function getDetailById() {
