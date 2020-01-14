@@ -10,7 +10,7 @@ options = {
 **/
 window.ajax = function (options) {
   const ajaxOptions = {
-    url: options.url + options.data.apikey || "",
+    url: options.url || "",
     method: options.method.toUpperCase() || "GET",
     headers: options.headers || {}, 
     data: options.data || null,
