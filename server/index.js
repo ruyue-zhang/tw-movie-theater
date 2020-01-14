@@ -4,6 +4,7 @@ const DOUBAN_MOVIE = '/v2/movie';
 
 const proxyServer = http.createServer((request, response) => {
   const parsedUrl = url.parse(request.url);
+  console.log(request.url);
 
   response.setHeader('Access-Control-Allow-Origin', '*');
   response.setHeader('Access-Control-Allow-Methods', '*');
@@ -11,7 +12,7 @@ const proxyServer = http.createServer((request, response) => {
   response.setHeader('Content-Type', 'text/plain;charset=utf-8');
 
   if (parsedUrl.pathname.indexOf(DOUBAN_MOVIE) > -1) {
-    http.get(`http://api.douban.com${parsedUrl.pathname}?${parsedUrl.query}`, res => {
+    http.get(`http://api.douban.com${parsedUrl.pathname}?apikey=0df993c66c0c636e29ecbb5344252a4a${parsedUrl.query}`, res => {
       var body = '';
 
       res.on('data', data => {
