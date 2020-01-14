@@ -12,6 +12,7 @@ function searchByKeyWords(){
   //     console.log(responseText);
   //   }, 
   // });
+　window.open('detail.html');
 }
 
 function getDetailById() {
