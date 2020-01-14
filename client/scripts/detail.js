@@ -20,6 +20,17 @@ function renderMovieInfomation(data) {
   let poster = document.getElementsByClassName('poster')[0];
   let url = data.images.small;
   poster.style.backgroundImage = `url("${url}")`;
+  let info = document.getElementsByClassName('info')[0];
+  info.innerHTML = `
+  <p>导演：${data.directors[0].name}</p>
+  <p>主演：${data.casts.map(value=>value.name).join('/')}</p>
+  <p>类型：${data.genres.join('/')}</p>
+  <p>制片国家/地区：${data.countries}</p>
+  <p>语言：${data.languages.join('/')}</p>
+  <p>片长：${data.durations}</p>
+  <p>上映日期：${data.pubdate}</p>
+  <p>豆瓣评分：${data.rating.average}</p>
+  `;
 }
 
 function renderSummary(data) {
