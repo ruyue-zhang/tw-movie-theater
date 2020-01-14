@@ -51,9 +51,35 @@
 }
 
 .movie-infomation {
+  position: relative;
   margin: 10px;
   flex-grow: 2;
-  background-color: rgb(255, 60, 0);
+}
+
+.title {
+  margin-left: 50px;
+  color: rgb(22, 22, 22);
+  line-height: 50px;
+  font-size: 25px;
+}
+
+.poster {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  width: 150px;
+  height: 80%;
+  background-position: center;
+}
+
+.info {
+  position: absolute;
+  top: 60px;
+  left: 600px;
+  width: 100px;
+  height: 80%;
+  margin-left: 50px;
+  background-color: burlywood;
 }
 
 .summary {
@@ -73,3 +99,4 @@
   background-color: rgb(61, 170, 57);
   flex-grow: 2;
 }
+
