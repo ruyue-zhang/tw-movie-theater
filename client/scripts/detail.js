@@ -1,16 +1,18 @@
 renderPage();
 
 function renderPage() {
-  // let keyWords =  window.location.search.substring(1);
+  let movieId =  window.location.search.substring(1).split('=')[1];
+  
+  console.log(movieId);
   ajax({
-    url: BASIC_URL + "/v2/movie/subject/" + "1308779",
+    url: BASIC_URL + "/v2/movie/subject/" + movieId,
     method: "GET",
     success: function(responseText) {
       console.log(responseText);
       renderMovieInfomation(responseText);
       renderSummary(responseText);
-      renderFilmReview(responseText);
-      renderRecommend(responseText)
+      getReviews(responseText, movieId);
+      // renderRecommend(responseText);
     }, 
   });
 }
@@ -35,10 +37,31 @@ function renderMovieInfomation(data) {
 
 function renderSummary(data) {
   document.getElementsByClassName('summary')[0].innerHTML += `<p>${data.summary}</p>`;
-  console.log(data.summary);
 }
 
-function renderFilmReview(data) {}
+function getReviews(data,movieId) {
+  ajax({
+    url: BASIC_URL + "/v2/movie/subject/" + movieId +"/reviews?start=0&count=5",
+    method: "GET",
+    success: function(responseText) {
+      renderFilmReview(responseText);
+    }, 
+  });
+}
+
+function renderFilmReview(data) {
+  let content = '';
+  let value = data.reviews;
+  for(let i = 0; i < 5; i++) {
+    content += `
+    <li>
+      <img src="${value[i].author.avatar}" alt="#">
+      <span>${value[i].title}</span>
+      <p>${value[i].content}</p>
+   </li>`;
+  }
+  document.getElementsByClassName('movie-comments')[0].innerHTML += content;
+}
 
 function renderRecommend(data) {}
 
