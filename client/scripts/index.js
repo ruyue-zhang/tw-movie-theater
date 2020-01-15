@@ -142,27 +142,10 @@ function addMoviesInfo(data) {
 }
 // getDetailById();
 
-getAllData();
 function searchByKeyWords(){
-  let keyWords = document.getElementsByClassName('search-box')[0].value;
-  console.log(keyWords);
-  // ajax({
-  //   url: BASIC_URL + "/v2/movie/search?q=" + keyWords,
-  //   method: "GET",
-  //   success: function(responseText) {
-  //     console.log(responseText);
-  //   }, 
-  // });
-}
-
-function getDetailById() {
-  ajax({
-    url: BASIC_URL + "/v2/movie/subject/" + movieId,
-    method: "GET",
-    success: function(responseText) {
-    console.log(responseText);
-    }, 
-  });
+  let keywords = document.getElementsByClassName('search-box')[0].value;
+  //按照keywords搜索，得到movieId,将movieId作为参数进行传递
+  window.open("detail.html?movieId=" + keywords);
 }
 
 

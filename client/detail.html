@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="referrer" content="no-referrer"/>
+  <title>detail-page</title>
+  <link rel="stylesheet" href="./styles/detail.css">
+  <link rel="stylesheet" href="./styles/iconfont.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html">
+      <img src="./img/logo.jpg" alt="logo" class="logo">
+    </a>
+    <div class="search">
+      <form action="#" onsubmit="searchByKeyWords()">
+        <input type="text" class="search-box">
+        <input type="submit" class="search-button" value="search">
+      </form>
+    </div>
+  </div>
+  <div class="content">
+    <div class="movie-infomation">
+      <p class="title"></p>
+      <div class="poster">
+      </div>
+      <div class="info">
+      </div>
+    </div>
+    <div class="summary">
+      <span class="info-title">剧情简介</span>
+    </div>
+    <div class="film-review">
+      <span class="info-title">豆瓣影评 Top5</span>
+      <ul class="movie-comments">
+      </ul>
+    </div>
+    <div class="recommend">
+      <span class="info-title">相似电影推荐</span>
+    </div>
+  </div>
+ 
+</body>
+<script src="./scripts/ajax.js"></script>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/detail.js"></script>
+</html>
