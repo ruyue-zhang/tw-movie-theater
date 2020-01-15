@@ -140,7 +140,8 @@ function addMoviesInfo(data) {
       movieList.appendChild(movieRow);
     }
 }
-// getDetailById();
+
+//getDetailById();
 
 function searchByKeyWords(){
   let keywords = document.getElementsByClassName('search-box')[0].value;
@@ -149,6 +150,6 @@ function searchByKeyWords(){
 }
 
 
-
+getAllData()
 
 
