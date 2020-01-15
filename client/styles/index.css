@@ -10,6 +10,10 @@
   background-color: rgb(75, 70, 70);
 }
 
+.movies-stage {
+  position: relative;
+}
+
 .search-box {
   margin-top: 20px;
   width: 400px;
@@ -26,16 +30,11 @@
   background-color: rgb(241, 175, 158);
 }
 
-.movies-stage {
-  display: flex;
-  border: 0;
-  padding: 0;
-}
-
 .nav-list-div {
   flex-grow: 2;
   height: 680px;
   position: sticky;
+  width: 50px;
   top:10px
 }
 
@@ -45,7 +44,6 @@
   width: 50px;
   flex-direction: column;
   text-align: center;
-
 }
 
 .movie-type {
@@ -58,11 +56,16 @@
 }
 
 .movie-list-div {
-  flex-grow: 10;
+  position: absolute;
+  float: right;
+  top: 0;
+  left: 70px;
+  width: 95%;
 }
 
 .movie-list {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -73,29 +76,41 @@
 }
 
 .movie-info {
-  margin: 20px;
+  margin: 20px 0;
   height: 200px;
   display: flex;
-  flex-grow: 1;
-  background-color: wheat;
 }
 
 .movie-cover {
-  flex-grow: 1;
+  width: 135px;
   height: 100%;
 }
 
 .movie-infos {
-  font-size: 14px;
-  flex-grow:2;
+  position: relative;
+  font-size: 10px;
+  flex-grow:3;
+  padding-left: 10px;
 }
 
 .movie-list td {
   width: 33%;
 }
 
-.movie-infos span{
-  display: inline-block;
+.infos{
+  display: block;
   word-break: break-all;
-  line-height: 20px;
+  line-height: 30px;
+}
+
+.movie-infos a {
+  text-decoration: none;
+  color: black;
+}
+
+.movie-rate {
+  position: absolute;
+  color: rgb(255, 153, 0);
+  bottom: 0;
+  right: 70px;
 }
