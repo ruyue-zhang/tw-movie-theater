@@ -34,6 +34,7 @@ function renderMovieInfomation(data) {
 }
 
 function renderSummary(data) {
+  document.getElementsByClassName('summary')[0].innerHTML += `<p>${data.summary}</p>`;
   console.log(data.summary);
 }
 

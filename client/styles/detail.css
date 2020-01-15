@@ -50,12 +50,6 @@
   flex-direction: column;
 }
 
-.movie-infomation {
-  position: relative;
-  margin: 10px;
-  flex-grow: 3;
-}
-
 .title {
   margin-left: 50px;
   color: rgb(22, 22, 22);
@@ -64,39 +58,41 @@
 }
 
 .poster {
-  position: absolute;
-  top: 60px;
-  left: 70px;
-  width: 180px;
-  height: 80%;
+  float: left;
+  width: 170px;
+  height: 220px;
+  margin-left: 70px;
   background-position: center;
 }
 
 .info {
-  position: absolute;
-  top: 60px;
-  left: 500px;
-  width: 500px;
-  height: 80%;
   font-size: 18px;
-  margin-left: 50px;
+  margin-left: 300px;
+  float: left;
 }
 
+.info-title {
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+}
+
+
 .summary {
-  margin: 10px;
-  background-color: blue;
-  flex-grow: 1.5;
+  margin: 20px auto 10px 50px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: serif;
+  text-indent: 2em;
 }
 
 .film-review {
-  margin: 10px;
-  background-color: rgb(207, 75, 119);
-  flex-grow: 3;
+  margin: 20px auto 10px 50px;
+  text-indent: 2em;
 }
 
 .recommend {
-  margin: 10px;
-  background-color: rgb(61, 170, 57);
-  flex-grow: 2;
+  margin: 20px auto 10px 50px;
+  text-indent: 2em;
 }
 
