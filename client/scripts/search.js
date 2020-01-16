@@ -1,7 +1,7 @@
-let BASIC_URL = 'http://127.0.0.1:8888';
 let moviesIdArr =  window.location.search.substring(1).split('=')[1].split('&');
-getSearchResult();
 let resultList = '';
+getSearchResult();
+
 function getSearchResult() {
   moviesIdArr.forEach(value => {
     ajax({
@@ -16,7 +16,6 @@ function getSearchResult() {
 
 function renderSearchReaults(data) {
   let url = data.images.small;
-  console.log(data.id);
   document.getElementsByClassName('result-list')[0].innerHTML += `
   <li>
   <a href="detail.html?movieId=${data.id}">
@@ -37,3 +36,4 @@ function renderSearchReaults(data) {
     </a>
   </li>`;
 }
+

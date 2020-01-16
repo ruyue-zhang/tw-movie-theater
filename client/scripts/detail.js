@@ -1,9 +1,7 @@
-let BASIC_URL = 'http://127.0.0.1:8888';
+let movieId = window.location.search.substring(1).split('=')[1];
 renderPage();
 
 function renderPage() {
-  let movieId =  window.location.search.substring(1).split('=')[1]; 
-  console.log(movieId);
   ajax({
     url: BASIC_URL + "/v2/movie/subject/" + movieId,
     method: "GET",
@@ -12,8 +10,8 @@ function renderPage() {
       renderSummary(responseText);
       getReviews(responseText, movieId);
       // renderRecommend(responseText);
-    }, 
-  });
+    },
+  })
 }
 
 function renderMovieInfomation(data) {
@@ -45,7 +43,7 @@ function getReviews(data,movieId) {
     success: function(responseText) {
       renderFilmReview(responseText);
     }, 
-  });
+  })
 }
 
 function renderFilmReview(data) {
@@ -57,11 +55,10 @@ function renderFilmReview(data) {
       <img src="${value[i].author.avatar}" alt="#">
       <span>${value[i].title}</span>
       <p>${value[i].content}</p>
-   </li>`;
+  </li>`;
   }
   document.getElementsByClassName('movie-comments')[0].innerHTML += content;
 }
 
 function renderRecommend(data) {}
-
 

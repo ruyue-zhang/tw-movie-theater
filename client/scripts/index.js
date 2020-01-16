@@ -1,5 +1,5 @@
 let BASIC_URL = 'http://127.0.0.1:8888';
-var movieId = '26942674';
+let movieId = '26942674';
 const top250 = 'top250';
 var movieDatas = [];
 getAllData();
@@ -147,12 +147,13 @@ function searchByKeywords(){
   if(keywords) {
     let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
     if(moviesIdString.length) {
-      window.open(`search.html?movieId=${moviesIdString}`);
+      window.open(`search.html?movieId=${moviesIdString}`,"_self");
     } else {
-      window.open(`notFindPage.html`);
+      window.open(`notFindPage.html`,"_self");
     }
   }
 }
+
 
 
 
