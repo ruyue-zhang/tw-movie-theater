@@ -2,14 +2,12 @@ let BASIC_URL = 'http://127.0.0.1:8888';
 renderPage();
 
 function renderPage() {
-  let movieId =  window.location.search.substring(1).split('=')[1];
-  
+  let movieId =  window.location.search.substring(1).split('=')[1]; 
   console.log(movieId);
   ajax({
     url: BASIC_URL + "/v2/movie/subject/" + movieId,
     method: "GET",
     success: function(responseText) {
-      console.log(responseText);
       renderMovieInfomation(responseText);
       renderSummary(responseText);
       getReviews(responseText, movieId);

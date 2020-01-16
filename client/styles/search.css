@@ -54,6 +54,11 @@
 .result-list li {
   border-bottom: 1px solid gray;
 }
+.result-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .title {
   margin-left: 50px;

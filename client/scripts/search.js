@@ -16,8 +16,10 @@ function getSearchResult() {
 
 function renderSearchReaults(data) {
   let url = data.images.small;
+  console.log(data.id);
   document.getElementsByClassName('result-list')[0].innerHTML += `
   <li>
+  <a href="detail.html?movieId=${data.id}">
     <div class="movie-infomation">
       <p class="title">${data.title} - ${data.original_title}(${data.pubdates[0].substring(0,4)})</p>
       <div class='poster' style="background-image:url(${url})"></div>
@@ -32,5 +34,6 @@ function renderSearchReaults(data) {
         <p>豆瓣评分：${data.rating.average}</p>
       </div>
     </div>
+    </a>
   </li>`;
 }
