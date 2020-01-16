@@ -15,9 +15,8 @@ function getAllData() {
 
 function searchByKeywords(event){
   let currentEvent = event;
-  let keywords = currentEvent.target.firstChild.nextElementSibling.value;
+  let keywords = currentEvent.target.parentNode.firstChild.nextElementSibling.value;
   console.log(keywords);
-  currentEvent.target.firstChild.nextElementSibling.value = '';
   if(keywords) {
     let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
     if(moviesIdString.length) {

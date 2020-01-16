@@ -143,7 +143,6 @@ function addMoviesInfo(data) {
 
 function searchByKeywords(){
   let keywords = document.getElementsByClassName('search-box')[0].value;
-  document.getElementsByClassName('search-box')[0].value = '';
   if(keywords) {
     let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
     if(moviesIdString.length) {
