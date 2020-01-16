@@ -12,10 +12,6 @@
   background-color: rgb(75, 70, 70);
 }
 
-.movies-stage {
-  position: relative;
-}
-
 .logo {
   position: absolute;
   left: 100px;
@@ -46,8 +42,17 @@
   background-color: rgb(241, 175, 158);
 }
 
+.content {
+  width: 80%;
+  margin: 10px auto;
+}
+
 .result-list {
   list-style: none;
+}
+
+.result-list li {
+  border-bottom: 1px solid gray;
 }
 
 .title {
@@ -58,7 +63,7 @@
 }
 
 .poster {
-  float: left;
+  display: inline-block;
   width: 170px;
   height: 220px;
   margin-left: 70px;
@@ -67,7 +72,7 @@
 }
 
 .info {
+  display: inline-block;
   margin-left: 70px;
   font-size: 18px;
-  float: left;
 }

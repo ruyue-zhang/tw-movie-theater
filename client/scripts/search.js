@@ -1,6 +1,5 @@
 let BASIC_URL = 'http://127.0.0.1:8888';
 let moviesIdArr =  window.location.search.substring(1).split('=')[1].split('&');
-console.log(moviesIdArr);
 getSearchResult();
 let resultList = '';
 function getSearchResult() {
@@ -9,7 +8,6 @@ function getSearchResult() {
       url: BASIC_URL + "/v2/movie/subject/" + value,
       method: "GET",
       success: function(responseText) {
-        console.log(responseText);
         renderSearchReaults(responseText);
       }, 
     });
@@ -17,11 +15,12 @@ function getSearchResult() {
 }
 
 function renderSearchReaults(data) {
+  let url = data.images.small;
   document.getElementsByClassName('result-list')[0].innerHTML += `
   <li>
     <div class="movie-infomation">
       <p class="title">${data.title} - ${data.original_title}(${data.pubdates[0].substring(0,4)})</p>
-      <div class='poster' style="background-img:url(${data.images.small})"></div>
+      <div class='poster' style="background-image:url(${url})"></div>
       <div class="info">
         <p>导演：${data.directors[0].name}</p>
         <p>主演：${data.casts.map(value=>value.name).join('/')}</p>
