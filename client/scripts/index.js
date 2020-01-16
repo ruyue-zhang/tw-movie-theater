@@ -1,8 +1,8 @@
 let BASIC_URL = 'http://127.0.0.1:8888';
-var movieId = '26942674';
+let movieId = '26942674';
 const top250 = 'top250';
 var movieDatas = [];
-//  searchByKeyWords();
+getAllData();
 
 function getAllData() {
   ajax({
@@ -145,12 +145,17 @@ function addMoviesInfo(data) {
     }
 }
 
-//getDetailById();
-
-function searchByKeyWords(){
+function searchByKeywords(){
   let keywords = document.getElementsByClassName('search-box')[0].value;
-  //按照keywords搜索，得到movieId,将movieId作为参数进行传递
-  window.open("detail.html?movieId=" + keywords);
+  document.getElementsByClassName('search-box')[0].value = '';
+  if(keywords) {
+    let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
+    if(moviesIdString.length) {
+      window.open(`search.html?movieId=${moviesIdString}`,"_self");
+    } else {
+      window.open(`notFindPage.html`,"_self");
+    }
+  }
 }
 
 

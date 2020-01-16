@@ -1,27 +1,22 @@
-BASIC_URL = "http://127.0.0.1:8888";
-var alldata = JSON.parse(localStorage.getItem("moviedata"));
+let movieId = window.location.search.substring(1).split('=')[1];
 renderPage();
 
 function renderPage() {
-  let movieId = window.location.search.substring(1).split("=")[1];
   ajax({
     url: BASIC_URL + "/v2/movie/subject/" + movieId,
     method: "GET",
     success: function(responseText) {
-      console.log(responseText);
       renderMovieInfomation(responseText);
       renderSummary(responseText);
       getReviews(responseText, movieId);
       renderRecommend(responseText);
-    }
-  });
+    },
+  })
 }
 
 function renderMovieInfomation(data) {
-  document.getElementsByClassName(
-    "title"
-  )[0].innerHTML = `${data.title} - ${data.original_title}(${data.pubdate})`;
-  let poster = document.getElementsByClassName("poster")[0];
+  document.getElementsByClassName('title')[0].innerHTML = `${data.title} - ${data.original_title}(${data.pubdates[0].substring(0,4)})`;
+  let poster = document.getElementsByClassName('poster')[0];
   let url = data.images.small;
   poster.style.backgroundImage = `url("${url}")`;
   let info = document.getElementsByClassName("info")[0];
@@ -50,9 +45,8 @@ function getReviews(data, movieId) {
     method: "GET",
     success: function(responseText) {
       renderFilmReview(responseText);
-    }
-  });
-  
+    }, 
+  })
 }
 
 function renderFilmReview(data) {
@@ -64,13 +58,14 @@ function renderFilmReview(data) {
       <img src="${value[i].author.avatar}" alt="#">
       <span>${value[i].title}</span>
       <p>${value[i].content}</p>
-   </li>`;
+  </li>`;
   }
   document.getElementsByClassName("movie-comments")[0].innerHTML += content;
 }
 
 function renderRecommend(data) {
   let movieType = data.genres;
+  alldata = JSON.parse(localStorage.getItem("moviedata"));
   let RecommendMovieArr = [];
   movieType.forEach(() => {
     alldata.forEach(item => {
