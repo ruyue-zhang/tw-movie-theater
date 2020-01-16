@@ -146,9 +146,8 @@ function addMoviesInfo(data) {
 function searchByKeyWords(){
   let keywords = document.getElementsByClassName('search-box')[0].value;
   let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
-  window.open("search.html?movieId=" + moviesIdString);
+  window.open(`search.html?movieId=${moviesIdString}`);
 }
-
 
 getAllData()
 
