@@ -1,23 +1,13 @@
 let BASIC_URL = 'http://127.0.0.1:8888';
 const top250 = 'top250';
-var movieDatas = [];
+var movieDatas = JSON.parse(localStorage.getItem("moviedata"));
 getAllData();
 
-function getAllData() {
-  ajax({
-      url: BASIC_URL + '/v2/movie/' + top250,
-      method: "GET", 
-      success: function(responseText) {
-        movieDatas = responseText.subjects;
-      }, 
-  })
-}
+
 
 function searchByKeywords(event){
-  let currentEvent = event;
-  let keywords = currentEvent.target.firstChild.nextElementSibling.value;
+  let keywords = document.getElementsByClassName("search-box")[0].value;
   console.log(keywords);
-  currentEvent.target.firstChild.nextElementSibling.value = '';
   if(keywords) {
     let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
     if(moviesIdString.length) {
