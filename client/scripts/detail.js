@@ -18,7 +18,7 @@ function renderPage() {
 }
 
 function renderMovieInfomation(data) {
-  document.getElementsByClassName('title')[0].innerHTML = `${data.title} - ${data.original_title}(${data.pubdate})`;
+  document.getElementsByClassName('title')[0].innerHTML = `${data.title} - ${data.original_title}(${data.pubdates[0].substring(0,4)})`;
   let poster = document.getElementsByClassName('poster')[0];
   let url = data.images.small;
   poster.style.backgroundImage = `url("${url}")`;
