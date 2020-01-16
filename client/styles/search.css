@@ -45,3 +45,29 @@
   border-radius: 5px;
   background-color: rgb(241, 175, 158);
 }
+
+.result-list {
+  list-style: none;
+}
+
+.title {
+  margin-left: 50px;
+  color: rgb(22, 22, 22);
+  line-height: 50px;
+  font-size: 25px;
+}
+
+.poster {
+  float: left;
+  width: 170px;
+  height: 220px;
+  margin-left: 70px;
+  margin-right: 230px;
+  background-position: center;
+}
+
+.info {
+  margin-left: 70px;
+  font-size: 18px;
+  float: left;
+}
