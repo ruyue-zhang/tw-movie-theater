@@ -15,6 +15,7 @@ function getAllData() {
 }
 
 function mainPage(data) {
+  localStorage.setItem("moviedata",JSON.stringify(data.subjects));
   getGenres(data.subjects);
   addMoviesInfo(data.subjects);
 }
@@ -105,6 +106,7 @@ function addMoviesInfo(data) {
         movieCard.setAttribute("class","movie-info");
         let index = rowCount * 3 + colCount;
         let movieInfos = document.createElement("div");
+        let movieCoverLink = document.createElement("a");
         let movieCover = document.createElement("img");
         let movieNameAndYear = document.createElement("a");
         let moviePubDate = document.createElement("span");
@@ -113,6 +115,7 @@ function addMoviesInfo(data) {
         let movieScore = document.createElement("span");
 
         movieInfos.setAttribute("class","movie-infos");
+        movieCoverLink.setAttribute("href",`detail.html?keywords=${data[index].id}`)
         movieCover.setAttribute("class","movie-cover");
         movieCover.setAttribute("src",`${data[index].images.small}`);
         movieNameAndYear.setAttribute("class","infos");
@@ -128,12 +131,13 @@ function addMoviesInfo(data) {
         movieGenres.innerHTML = `分类：${data[index].genres.join("/")}`;
         movieScore.innerHTML = `评分：${data[index].rating.average}/10`;
 
+        movieCoverLink.appendChild(movieCover);
         movieInfos.appendChild(movieNameAndYear);
         movieInfos.appendChild(moviePubDate);
         movieInfos.appendChild(movieGenres);
         movieInfos.appendChild(movieDuration);
         movieInfos.appendChild(movieScore);
-        movieCard.appendChild(movieCover);
+        movieCard.appendChild(movieCoverLink);
         movieCard.appendChild(movieInfos);
         movieRow.appendChild(movieCard);
       }
@@ -154,6 +158,4 @@ function searchByKeywords(){
 }
 
 
-
-
-
+getAllData()
