@@ -58,6 +58,8 @@
   display: flex;
   line-height: 35px;
   width: 50px;
+  position: sticky;
+  top: 10px;
   flex-direction: column;
   text-align: center;
 }
