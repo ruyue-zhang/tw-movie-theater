@@ -15,6 +15,7 @@ function getAllData() {
 }
 
 function mainPage(data) {
+  localStorage.setItem("moviedata",JSON.stringify(data.subjects));
   getGenres(data.subjects);
   addMoviesInfo(data.subjects);
 }
@@ -154,5 +155,3 @@ function searchByKeyWords(){
 
 
 getAllData()
-
-
