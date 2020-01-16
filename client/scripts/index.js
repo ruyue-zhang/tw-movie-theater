@@ -145,8 +145,8 @@ function addMoviesInfo(data) {
 
 function searchByKeyWords(){
   let keywords = document.getElementsByClassName('search-box')[0].value;
-  //按照keywords搜索，得到movieId,将movieId作为参数进行传递
-  window.open("detail.html?movieId=" + keywords);
+  let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
+  window.open("search.html?movieId=" + moviesIdString);
 }
 
 
