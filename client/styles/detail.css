@@ -112,7 +112,7 @@
   line-height: 50px;
 }
 
-.film-review p {
+.review-content {
   display: -webkit-box;
   text-overflow: ellipsis;
   overflow: hidden; 
@@ -124,9 +124,9 @@
   font-size: 15px;
 }
 
-/* .film-review p:hover {
+.review-content-1 {
   display: block;
-}  */
+} 
 
 .recommend {
   margin: 20px auto 10px 50px;
@@ -157,3 +157,4 @@
 .recommend-item p {
   text-indent: 0;
 }
+

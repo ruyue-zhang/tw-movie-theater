@@ -57,7 +57,7 @@ function renderFilmReview(data) {
     <li>
       <img src="${value[i].author.avatar}" alt="#">
       <span>${value[i].title}</span>
-      <p>${value[i].content}</p>
+      <p class='review-content'>${value[i].content}</p>
   </li>`;
   }
   document.getElementsByClassName("movie-comments")[0].innerHTML += content;
@@ -108,5 +108,15 @@ function showRecommendMovies(data) {
     recommendMovieDiv.appendChild(recommendMovieRate);
     recommendList.appendChild(recommendMovieDiv);
   }
-
 }
+
+document.getElementsByClassName('movie-comments')[0].addEventListener('click',function(event) {
+  //let currentTarget = ;
+  //let display = currentTarget.getAttribute('font-size');
+  event.target.classList.toggle("review-content-1");
+  // if(display === 'block') {
+  //   currentTarget.style.display = '-webkit-box';
+  // } else {
+  //   currentTarget.style.display = 'block';
+  // }
+})
