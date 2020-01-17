@@ -67,9 +67,9 @@ function renderRecommend(data) {
   let movieType = data.genres;
   alldata = JSON.parse(localStorage.getItem("moviedata"));
   let RecommendMovieArr = [];
-  movieType.forEach(() => {
+  movieType.forEach((type) => {
     alldata.forEach(item => {
-      if (item.genres.indexOf(movieType) && item.id !== data.id) {
+      if (item.genres.indexOf(type) > -1 && item.id !== data.id) {
         RecommendMovieArr.push(item);
       }
     });

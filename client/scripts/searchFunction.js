@@ -1,7 +1,6 @@
 let BASIC_URL = 'http://127.0.0.1:8888';
 const top250 = 'top250';
 var movieDatas = JSON.parse(localStorage.getItem("moviedata"));
-getAllData();
 
 
 

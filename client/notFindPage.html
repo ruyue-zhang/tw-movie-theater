@@ -4,9 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>not find</title>
+  <title>搜索结果</title>
+  <link rel="stylesheet" href="./styles/notfound.css">
 </head>
 <body>
-  not found!!!
+  <div class="nav">
+    <a href="index.html">
+      <img src="./img/logo.jpg" alt="logo" class="logo">
+    </a>
+    <div class="search">
+      <input type="text" class="search-box">
+      <input type="submit" class="search-button" value="search" onclick="searchByKeywords(event)">
+    </div>
+  </div>
+  <div class="notfound">
+    <div class="notfound-info">对不起，没有找到相应的电影信息</div>
+  </div>
 </body>
+<script src="./scripts/searchFunction.js"></script> 
 </html>
