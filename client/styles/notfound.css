@@ -19,14 +19,14 @@
 }
 
 .search {
-  flex-grow: 1;
   display: inline;
+  flex-grow: 1;
 }
 
 .search-box {
+  height: 30px;
   margin-top: 20px;
   min-width: 270px;
-  height: 30px;
   border: none;
   border-radius: 5px;
 }

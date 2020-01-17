@@ -17,8 +17,8 @@
 }
 
 .logo {
-  margin-left: 80px;
   height: 90px;
+  margin-left: 80px;
   border-radius: 50%;
 }
 
@@ -28,9 +28,9 @@
 }
 
 .search-box {
-  margin-top: 20px;
   min-width: 270px;
   height: 30px;
+  margin-top: 20px;
   border: none;
   border-radius: 5px;
 }
@@ -42,17 +42,15 @@
 .nav-list-div {
   flex-grow: 2;
   height: 680px;
-  position: sticky;
   width: 50px;
   top: 10px;
 }
 
 .type-list {
   display: flex;
-  line-height: 35px;
   width: 50px;
-  position: sticky;
   top: 10px;
+  line-height: 35px;
   flex-direction: column;
   text-align: center;
 }
@@ -88,9 +86,9 @@
 }
 
 .movie-info {
+  display: flex;
   margin: 20px 0;
   height: 200px;
-  display: flex;
 }
 
 .movie-cover {
@@ -122,23 +120,20 @@
 
 .movie-rate {
   position: absolute;
-  color: rgb(255, 153, 0);
   bottom: 0;
   right: 70px;
+  color: rgb(255, 153, 0);
 }
 
 .top-button {
-  height: 30px;
-  line-height: 30px;
-  width: 100px;
-  background-color: #eee;
   position: fixed;
+  height: 30px;
+  width: 100px;
   right: 0px;
   bottom: 40px;
+  line-height: 30px;
   display: none;
-  -webkit-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  transition: background-color 1s;
+  background-color: #eee;
   z-index: 2;
 }
 
