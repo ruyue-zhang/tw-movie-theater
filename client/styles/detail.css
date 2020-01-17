@@ -13,11 +13,8 @@
 }
 
 .logo {
-  position: absolute;
-  left: 100px;
-  width: 90px;
+  margin-left: 80px;
   height: 90px;
-  vertical-align: middle;
   border-radius: 50%;
 }
 
