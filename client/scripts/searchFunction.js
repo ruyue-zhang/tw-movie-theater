@@ -4,9 +4,8 @@ var movieDatas = JSON.parse(localStorage.getItem("moviedata"));
 
 
 
-function searchByKeywords(event){
+function searchByKeywords(){
   let keywords = document.getElementsByClassName("search-box")[0].value;
-  console.log(keywords);
   if(keywords) {
     let moviesIdString = movieDatas.filter(value => value.title.indexOf(keywords) > -1).map(value => value.id).join('&');
     if(moviesIdString.length) {

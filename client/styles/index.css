@@ -38,14 +38,6 @@
   border-radius: 5px;
 }
 
-.search-button {
-  color: white;
-  border: none;
-  font-size: 20px;
-  border-radius: 5px;
-  background-color: rgb(241, 175, 158);
-}
-
 .nav-list-div {
   flex-grow: 2;
   height: 680px;
