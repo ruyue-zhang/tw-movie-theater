@@ -14,7 +14,7 @@
 
 .logo {
   margin-left: 80px;
-  height: 90px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -24,26 +24,31 @@
 }
 
 .search-box {
+  height: 30px;
   margin-top: 20px;
-  width: 270px;
+  min-width: 270px;
   height: 30px;
   border: none;
   border-radius: 5px;
 }
 
+.icon-sousuo:hover {
+  cursor: pointer;
+}
+
 .content {
+  display: flex;
   width: 80%;
   height: 1000px;
   margin: 0 auto;
-  display: flex;
   flex-direction: column;
 }
 
 .title {
   margin-left: 50px;
-  color: rgb(22, 22, 22);
   line-height: 50px;
   font-size: 25px;
+  color: rgb(22, 22, 22);
 }
 
 .poster {
@@ -56,9 +61,9 @@
 }
 
 .info {
+  float: left;
   margin-left: 70px;
   font-size: 18px;
-  float: left;
 }
 
 .info-title {
@@ -108,7 +113,6 @@
   overflow: hidden; 
   -webkit-box-orient: vertical;
 
-
   -webkit-line-clamp: 2;
   margin-left: 2em;
   font-size: 15px;
@@ -135,8 +139,8 @@
 }
 
 .recommend-covers {
-  height: 200px;
   display: block;
+  height: 200px;
 }
 
 .recommend-item a {

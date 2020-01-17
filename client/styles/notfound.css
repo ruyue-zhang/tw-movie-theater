@@ -14,26 +14,31 @@
 
 .logo {
   margin-left: 80px;
-  height: 90px;
+  height: 70px;
   border-radius: 50%;
 }
 
 .search {
-  flex-grow: 1;
   display: inline;
+  flex-grow: 1;
 }
 
 .search-box {
+  height: 30px;
   margin-top: 20px;
-  width: 270px;
+  min-width: 270px;
   height: 30px;
   border: none;
   border-radius: 5px;
 }
 
+.icon-sousuo:hover {
+  cursor: pointer;
+}
+
 .notfound {
     width: 80%;
-    height: calc(100vh - 95px);
+    height: 70px;
 }
 
 .notfound-info {

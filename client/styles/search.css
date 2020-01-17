@@ -13,22 +13,27 @@
 }
 
 .logo {
+  height: 70px;
   margin-left: 80px;
-  height: 90px;
   border-radius: 50%;
 }
 
 .search {
-  flex-grow: 1;
   display: inline;
+  flex-grow: 1;
 }
 
 .search-box {
+  height: 30px;
   margin-top: 20px;
-  width: 270px;
+  min-width: 270px;
   height: 30px;
   border: none;
   border-radius: 5px;
+}
+
+.icon-sousuo:hover {
+  cursor: pointer;
 }
 
 .content {
@@ -43,6 +48,7 @@
 .result-list li {
   border-bottom: 1px solid gray;
 }
+
 .result-list a {
   text-decoration: none;
   color: inherit;
@@ -50,10 +56,10 @@
 
 
 .title {
-  margin-left: 50px;
-  color: rgb(22, 22, 22);
+  margin-left: 50px;  
   line-height: 50px;
   font-size: 25px;
+  color: rgb(22, 22, 22);
 }
 
 .poster {
