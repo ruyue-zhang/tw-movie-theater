@@ -33,9 +33,7 @@ function renderMovieInfomation(data) {
 }
 
 function renderSummary(data) {
-  document.getElementsByClassName(
-    "summary"
-  )[0].innerHTML += `<p>${data.summary}</p>`;
+  document.getElementsByClassName("summary")[0].innerHTML += `<p>${data.summary}</p>`;
 }
 
 function getReviews(data, movieId) {
@@ -57,7 +55,7 @@ function renderFilmReview(data) {
     <li>
       <img src="${value[i].author.avatar}" alt="#">
       <span>${value[i].title}</span>
-      <p class='review-content'>${value[i].content}</p>
+      <p class='review-content' onclick="changeStyle(event)">${value[i].content}</p>
     </li>`;
   }
   document.getElementsByClassName("movie-comments")[0].innerHTML += content;
@@ -110,13 +108,6 @@ function showRecommendMovies(data) {
   }
 }
 
-document.getElementsByClassName('movie-comments')[0].addEventListener('click',function(event) {
-  //let currentTarget = ;
-  //let display = currentTarget.getAttribute('font-size');
+function changeStyle(event) {
   event.target.classList.toggle("review-content-1");
-  // if(display === 'block') {
-  //   currentTarget.style.display = '-webkit-box';
-  // } else {
-  //   currentTarget.style.display = 'block';
-  // }
-})
+}
