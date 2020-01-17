@@ -31,6 +31,10 @@
   border-radius: 5px;
 }
 
+.icon-sousuo:hover {
+  cursor: pointer;
+}
+
 .notfound {
     width: 100%;
     height: calc(100vh - 95px);

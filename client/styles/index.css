@@ -35,6 +35,10 @@
   border-radius: 5px;
 }
 
+.icon-sousuo:hover {
+  cursor: pointer;
+}
+
 .nav-list-div {
   flex-grow: 2;
   height: 680px;

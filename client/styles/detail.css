@@ -31,6 +31,10 @@
   border-radius: 5px;
 }
 
+.icon-sousuo:hover {
+  cursor: pointer;
+}
+
 .content {
   width: 80%;
   height: 1000px;
