@@ -58,7 +58,7 @@ function renderFilmReview(data) {
       <img src="${value[i].author.avatar}" alt="#">
       <span>${value[i].title}</span>
       <p class='review-content'>${value[i].content}</p>
-  </li>`;
+    </li>`;
   }
   document.getElementsByClassName("movie-comments")[0].innerHTML += content;
 }
